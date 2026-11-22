@@ -1,0 +1,51 @@
+:root { --bg:#f6f7fb; --card:#fff; --ink:#1d2233; --muted:#6b7280; --brand:#2a4bd7; --gold:#b8860b; --good:#157f3b; --bad:#c0392b; --line:#e5e7ef; }
+* { box-sizing: border-box; }
+body { margin:0; font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif; background:var(--bg); color:var(--ink); }
+a { color: var(--brand); }
+h1 { margin: 8px 0 4px; } h2,h3 { margin: 0 0 8px; }
+.container { max-width: 1020px; margin: 0 auto; padding: 16px; }
+.nav { display:flex; align-items:center; justify-content:space-between; gap:12px; flex-wrap:wrap; padding:10px 20px; background:var(--card); border-bottom:1px solid var(--line); position:sticky; top:0; z-index:5; }
+.brand { font-weight:800; font-size:1.2rem; text-decoration:none; color:var(--ink); }
+.nav nav { display:flex; gap:14px; align-items:center; flex-wrap:wrap; }
+.nav a { text-decoration:none; color:var(--muted); font-weight:600; } .nav a.active { color:var(--brand); }
+.link { background:none; border:0; color:var(--muted); font:inherit; font-weight:600; cursor:pointer; }
+.pill { background:var(--brand); color:#fff; border-radius:999px; padding:1px 7px; font-size:.75rem; margin-left:4px; }
+.grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(210px,1fr)); gap:14px; margin-top:14px; }
+.card { background:var(--card); border:1px solid var(--line); border-radius:12px; padding:16px; margin:12px 0; }
+.card.narrow { max-width:440px; margin:24px auto; display:flex; flex-direction:column; gap:10px; }
+.product { text-align:center; margin:0; } .product .btn { width:100%; }
+.emoji { font-size:3rem; } .emoji.sm { font-size:1.6rem; }
+.price { font-weight:700; font-size:1.1rem; margin:6px 0; }
+.earn { color:var(--gold); font-weight:600; margin:6px 0; font-size:.92rem; }
+.muted { color:var(--muted); } .small { font-size:.85rem; } .good { color:var(--good); } .bad { color:var(--bad); }
+.error { color:var(--bad); font-weight:600; }
+label { display:flex; flex-direction:column; gap:4px; font-weight:600; font-size:.9rem; }
+input { padding:9px 10px; border:1px solid var(--line); border-radius:8px; font:inherit; width:100%; }
+.inline { display:flex; gap:8px; align-items:center; flex-wrap:wrap; } .inline input { width:120px; }
+.btn { background:var(--brand); color:#fff; border:0; border-radius:8px; padding:9px 16px; font:inherit; font-weight:600; cursor:pointer; }
+.btn:disabled { opacity:.5; cursor:not-allowed; } .btn.block { width:100%; margin-top:10px; padding:12px; }
+.btn.ghost { background:#eef1fb; color:var(--brand); }
+.row { display:flex; align-items:center; gap:10px; padding:9px 0; border-bottom:1px solid var(--line); } .row:last-child { border-bottom:0; }
+.row.total { font-weight:800; font-size:1.1rem; border-top:2px solid var(--line); border-bottom:0; }
+.grow { flex:1; } .qty { min-width:22px; text-align:center; } .amt { min-width:80px; text-align:right; }
+.two-col { display:grid; grid-template-columns:1.5fr 1fr; gap:16px; align-items:start; } @media (max-width:760px){ .two-col{ grid-template-columns:1fr; } }
+.box { background:#fffbea; border:1px dashed #c9a227; border-radius:10px; padding:12px; margin:8px 0 12px; } .box p { margin:6px 0; }
+.balance .big { font-size:2.2rem; font-weight:800; }
+.rules { margin:0; padding-left:18px; line-height:1.7; }
+.badge { padding:2px 10px; border-radius:999px; font-size:.78rem; font-weight:700; text-transform:uppercase; background:#eef1fb; color:var(--brand); }
+.badge.delivered { background:#e3f6ea; color:var(--good); } .badge.cancelled,.badge.refunded { background:#fde8e6; color:var(--bad); }
+.tabs { display:flex; gap:8px; margin:10px 0; flex-wrap:wrap; align-items:center; }
+.tab { background:#fff; border:1px solid var(--line); border-radius:8px; padding:7px 14px; cursor:pointer; text-transform:capitalize; font:inherit; font-weight:600; }
+.tab.on { background:var(--brand); color:#fff; border-color:var(--brand); }
+#root { min-height: 100vh; display: flex; flex-direction: column; }
+.container { flex: 1; width: 100%; }
+
+.footer {
+  background: var(--card);
+  border-top: 1px solid var(--line);
+  text-align: center;
+  padding: 18px 12px;
+  margin-top: 32px;
+  color: var(--muted);
+}
+.footer p { margin: 2px 0; }
